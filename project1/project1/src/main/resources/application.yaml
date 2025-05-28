@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /project1
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  webflux:
+    cors:
+      enabled: true
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/project?characterEncoding=utf8&useUnicode=true&serverTimezone=UTC"
+    username: root
+    password: ""
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
+
+jwt:
+  signerKey : "d9ae2b8dccef06790b64798732f876e011bbc6bd82aa057cceb053810b74e2757a7f109e68ee179e8839aba77b7dd91c19c625e2599b1de1f54be91c1e19ab2f5fb7225c0eea7c34c0b474d2d7abd8fb4299fe6872da440b768a4d4810be9b34466480857177569a277236d8deca1a9d692f4c735a112db3ae69de5895e7504561720c4a076c5e87b02e75d6382753eaf6db00b2170ce2d8e7abfcd6a1c390df1a292da501635fbdadf87d33dba9c244305d581db125a99e7e455f1043fdebdf531de2b80dbb71518b36fec700d6072a95bee7f29970983832a02ec5d5829392e510e0ea80df2861eabfedeea1932a8148ef49db9858cc69f1a59f370f749b98"
+
+dropbox:
+  app-key: "hnpu3ood8yxdflx"
+  app-secret: "zixek2x4hbcnnfk"
+  refresh-token: "pa8caRMUPTwAAAAAAAAAAahd9m3-j_5DEGp6PwTHt_ZSpbHCUuk31y3eTR7VFePp"

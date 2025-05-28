@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none !important ;
+}
+
+h2{
+    font-size: 30px !important;
+  }
+  
+.h-46px .css-t3ipsp-control {
+    height: 46px !important;
+}
+.h-46px .css-13cymwt-control{
+    height: 46px !important;
+}
+
+/* Định kiểu chung cho NavLink khi active */
+/* Áp dụng cho cả các mục cấp cao và mục trong submenu */
+.sidebar .nav-link.active {
+    /* Ví dụ: Đổi màu nền */
+    background-color: #e9ecef; /* Màu nền xám nhạt */
+    /* Ví dụ: Đổi màu chữ */
+    color: #007bff; /* Màu xanh dương */
+    /* Ví dụ: Thêm đường viền bên trái */
+    border-left: 3px solid #007bff;
+    /* Các kiểu khác tùy chọn */
+    font-weight: bold;
+  }
+  
+  /* Nếu bạn muốn kiểu khác biệt cho các mục trong submenu khi active */
+  .sidebar .nav .collapse .sub-menu .nav-link.active {
+      background-color: #d6dbdf; /* Màu nền xám đậm hơn một chút cho submenu */
+      color: #0056b3; /* Màu xanh đậm hơn */
+      border-left: 3px solid #0056b3;
+  }
+  
+  /* Đảm bảo icon và text trong NavLink active cũng có màu sắc mong muốn */
+  .sidebar .nav-link.active .menu-icon,
+  .sidebar .nav-link.active .menu-title {
+    color: #007bff; /* Đảm bảo màu icon và text khớp với màu chữ */
+  }
+  
+  .sidebar .nav .collapse .sub-menu .nav-link.active i,
+  .sidebar .nav .collapse .sub-menu .nav-link.active span {
+      color: #0056b3;
+  }
+  
+  /* (Tùy chọn) Nếu bạn muốn mục cha của dropdown (Công ty & Thực tập)
+     cũng có một trạng thái đặc biệt khi một trong các mục con của nó active.
+     Điều này phức tạp hơn vì cần kiểm tra URL con, nhưng một cách đơn giản
+     là định kiểu cho thẻ <a> cha khi dropdown đang mở (có class 'show').
+     Lưu ý: Cách này không dựa trực tiếp vào NavLink active mà dựa vào trạng thái collapse.
+  */
+  .sidebar .nav-item .nav-link[aria-expanded="true"] {
+      background-color: #f8f9fa; /* Ví dụ: màu nền khi dropdown mở */
+      color: #212529;
+  }
